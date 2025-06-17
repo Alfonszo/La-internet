@@ -1,0 +1,307 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y scroll suave */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Tipografía */
+h1 { font-size: 3.5em; margin-bottom: 20px; }
+h2 { font-size: 2.5em; margin-bottom: 16px; }
+h3 { font-size: 1.8em; margin-bottom: 12px; }
+p, li {
+  font-size: 1.15em;
+  line-height: 1.6;
+}
+ul { list-style-type: none; }
+
+/* Botones */
+button {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background #4464 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #5720a4, #145bd9);
+  transform: scale(1.05);
+}
+
+/* Encabezado */
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8em;
+  color: #6a11cb;
+  font-weight: bold;
+  padding: 20px 30px;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #6a11cb;
+}
+
+/* Hero principal */
+#hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('inicio.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 4em;
+  max-width: 800px;
+}
+
+/* Secciones */
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tarjetas */
+.carta {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+
+.carta:hover {
+  transform: translateY(-5px);
+}
+
+/* Aplicaciones */
+#caracteristicas {
+  background-color: #f4f4f4;
+}
+
+#caracteristicas li {
+  margin: 16px 0;
+  font-weight: 500;
+  position: relative;
+  padding-left: 24px;
+}
+
+#caracteristicas li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Pie de página */
+footer {
+  background: #222;
+  color: #bbb;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+  header nav {
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+
+  #nuestros-programas .programas {
+    display: flex;
+    gap: 20px;
+  }
+
+  .carta {
+    flex: 1;
+  }
+
+  #somos-proya .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
+
+  #somos-proya .texto {
+    flex: 1;
+  }
+
+  #somos-proya .img-container {
+    flex: 1;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+  }
+  /* Tema Oscuro General */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Tipografía */
+h1, h2, h3 { color: #ffffff; }
+p, li { color: #cccccc; }
+
+/* Botones */
+button {
+  background-color: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #512da8;
+  transform: scale(1.05);
+}
+
+/* Navegación y Header */
+header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header .logo {
+  color: #bb86fc;
+}
+
+header a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #bb86fc;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("inicio.jpg") center/cover no-repeat;
+  color: white;
+}
+
+#hero h1 {
+  font-size: 4em;
+}
+
+/* Secciones */
+section {
+  padding: 100px 20px;
+}
+
+/* Tarjetas */
+.carta {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  padding: 30px;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+
+.carta:hover {
+  transform: translateY(-5px);
+}
+
+#nuestros-programas {
+  background-color: #2b2b2b;
+}
+
+/* Características */
+#caracteristicas {
+  background-color: #222;
+}
+
+#caracteristicas li::before {
+  content: "✔️";
+  margin-right: 8px;
+}
+
+/* Final */
+#final {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+/* Footer */
+footer {
+  background-color: #0f0f0f;
+  color: #999;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+/* Color de acento */
+.color-acento {
+  color: #bb86fc;
+}
+
+}
+
